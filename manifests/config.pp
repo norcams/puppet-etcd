@@ -3,7 +3,7 @@
 class etcd::config {
   case $::osfamily {
     'RedHat' : {
-      file { '/etc/sysconfig/etcd':
+      file { '/etc/etcd/etcd.conf':
         ensure  => present,
         owner   => $etcd::user,
         group   => $etcd::group,
